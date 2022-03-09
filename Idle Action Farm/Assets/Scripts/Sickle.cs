@@ -6,7 +6,6 @@ using PlayerSpace;
 public class Sickle : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Whea"))
-            print("Whea kill");
+        other.GetComponent<Whea>()?.Cut();
     }
 }

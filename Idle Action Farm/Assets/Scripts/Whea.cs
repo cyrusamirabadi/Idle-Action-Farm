@@ -10,4 +10,9 @@ public class Whea : MonoBehaviour
 
         Debug.Log("Player Zona");
     }
+
+    public void Cut(){
+        Debug.LogError("Cut");
+        Destroy(this.gameObject);
+    }
 }
