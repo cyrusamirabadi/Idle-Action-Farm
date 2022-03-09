@@ -18,11 +18,12 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        _rigidbody.velocity = new Vector3(_joystick.Horizontal * speed, 0, _joystick.Vertical * speed);
 
         if (_joystick.Horizontal != 0 && _joystick.Vertical != 0){
-            _playerAnimations.Move();
-            transform.rotation = Quaternion.LookRotation(new Vector3(_joystick.Horizontal * speed, 0, _joystick.Vertical * speed));
+            if (_playerAnimations.Move()){
+                _rigidbody.velocity = new Vector3(_joystick.Horizontal * speed, 0, _joystick.Vertical * speed);
+                transform.rotation = Quaternion.LookRotation(new Vector3(_joystick.Horizontal * speed, 0, _joystick.Vertical * speed));
+            }
         }
         else{
             _playerAnimations.State();

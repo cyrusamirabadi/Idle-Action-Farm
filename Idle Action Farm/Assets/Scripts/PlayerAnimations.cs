@@ -25,16 +25,14 @@ public class PlayerAnimations : MonoBehaviour
         _animator.SetBool(_anim.State, true);
     }
 
-    public void Move(){
-
-        if (_anim is null){
-            print("нету анимации");
-            return;
+    public bool Move(){
+        if (_anim is null || _anim.Move is null){
+            return false;
         }
 
-        print(_anim.Move);
-
         _animator.SetBool(_anim.Move, true);
+
+        return true;
     }
 
     public void State(){
