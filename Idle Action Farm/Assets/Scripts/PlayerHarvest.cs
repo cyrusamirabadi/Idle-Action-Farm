@@ -5,9 +5,19 @@ using PlayerSpace;
 
 public class PlayerHarvest : MonoBehaviour
 {
+    [SerializeField] private GameObject sickle;
+
     private const int timerValue = 2; 
     private float timer = timerValue;
-    private bool isHarvest = false;
+    private bool IsHarvest = false;
+
+    private bool isHarvest {
+        get => IsHarvest;
+        set{
+            sickle.SetActive(value);
+            IsHarvest = value;
+        }
+    }
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Whea") && !isHarvest){
             GetComponent<PlayerAnimations>().SetAnim(new Harvest());

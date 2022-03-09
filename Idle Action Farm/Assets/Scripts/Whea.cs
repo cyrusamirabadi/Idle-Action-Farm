@@ -12,7 +12,6 @@ public class Whea : MonoBehaviour
     }
 
     public void Cut(){
-        Debug.LogError("Cut");
         Destroy(this.gameObject);
     }
 }
