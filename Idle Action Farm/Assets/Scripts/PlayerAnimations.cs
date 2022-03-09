@@ -9,6 +9,8 @@ public class PlayerAnimations : MonoBehaviour
     private Animator _animator;
     private IPlayerAnim? _anim;
 
+    public bool isState {get; private set;}
+
     private void Start() {
         _animator = GetComponent<Animator>();
         SetAnim(new Walk());
@@ -32,17 +34,19 @@ public class PlayerAnimations : MonoBehaviour
 
         _animator.SetBool(_anim.Move, true);
 
+        isState = false;
+
         return true;
     }
 
     public void State(){
         if (_anim is null){
-            print("нету анимации");
+            Debug.LogError("_anim is null");
             return;
         }
 
-        print(_anim.State);
-
         _animator.SetBool(_anim.Move, false);
+
+        isState = true;
     }
 }
