@@ -19,7 +19,6 @@ public class Whea : MonoBehaviour
     public Transform target;
     public void Cut(){
         if (FindObjectOfType<GameManager>().AddCrop() && !IsGrowth){
-            FindObjectOfType<Points>().Add();
             Instantiate(_crap).GetComponent<Transform>().position = 
                 new Vector3(transform.position.x, _crap.GetComponent<Transform>().position.y, transform.position.z);
             //Destroy(this.gameObject);
