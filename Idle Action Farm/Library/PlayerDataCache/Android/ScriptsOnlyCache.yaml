@@ -5,11 +5,13 @@ ScriptsOnlyBuild:
     - Bag
     - Crop
     - FloatingJoystick
+    - GameManager
     - PlayerAnimations
     - PlayerController
     - PlayerHarvest
     - Points
     - Sickle
+    - SliderScripts
     - Whea
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -31,10 +33,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -46,6 +46,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -91,53 +92,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1736}
     - Class: 114
-      Script: {instanceID: 2110}
+      Script: {instanceID: 2018}
     - Class: 114
-      Script: {instanceID: 2186}
+      Script: {instanceID: 2112}
     - Class: 114
-      Script: {instanceID: 2490}
+      Script: {instanceID: 2188}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2746}
     - Class: 114
-      Script: {instanceID: 2888}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 2974}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 3100}
     - Class: 114
-      Script: {instanceID: 3512}
+      Script: {instanceID: 3128}
     - Class: 114
-      Script: {instanceID: 3702}
+      Script: {instanceID: 3272}
     - Class: 114
-      Script: {instanceID: 4306}
+      Script: {instanceID: 3382}
     - Class: 114
-      Script: {instanceID: 4362}
+      Script: {instanceID: 3518}
     - Class: 114
-      Script: {instanceID: 4960}
+      Script: {instanceID: 3708}
     - Class: 114
-      Script: {instanceID: 5274}
+      Script: {instanceID: 4096}
     - Class: 114
-      Script: {instanceID: 5308}
+      Script: {instanceID: 4290}
     - Class: 114
-      Script: {instanceID: 5752}
+      Script: {instanceID: 4316}
     - Class: 114
-      Script: {instanceID: 5754}
+      Script: {instanceID: 4372}
     - Class: 114
-      Script: {instanceID: 24300}
+      Script: {instanceID: 4968}
     - Class: 114
-      Script: {instanceID: 24362}
+      Script: {instanceID: 5282}
     - Class: 114
-      Script: {instanceID: 30414}
+      Script: {instanceID: 5316}
+    - Class: 114
+      Script: {instanceID: 5350}
+    - Class: 114
+      Script: {instanceID: 5762}
+    - Class: 114
+      Script: {instanceID: 5764}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -167,6 +174,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: aba7b2852ef61d175dd9602e7723d5e5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Mask
   - hash:
       serializedVersion: 2
       Hash: 824e8d4cb47ffd88ddf959dbd4526585
@@ -367,10 +380,22 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
+      Hash: 80555497fcc19ea7cb17e24924a6b4b6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Auto
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerAnimations
+  - hash:
+      serializedVersion: 2
+      Hash: 1ccf254e405f6294d6c7b85b87322752
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Crop
   - hash:
       serializedVersion: 2
       Hash: 62824bb9557c7e987502f2fbd2a26819
@@ -673,6 +698,12 @@ ScriptsOnlyBuild:
     className: CinemachineFixedSignal
   - hash:
       serializedVersion: 2
+      Hash: f1f21ceeaa476a3cd9d190dacc2e5790
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SliderScripts
+  - hash:
+      serializedVersion: 2
       Hash: 611bc970ee9dc090779a3fac6a18fac6
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -719,6 +750,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: b8f1fa83144c96f679b000c7efbaaf61
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: 7c792393fb82488bd20139dcc5ba26d8
@@ -785,12 +822,6 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineTrackedDolly
-  - hash:
-      serializedVersion: 2
-      Hash: aba7b2852ef61d175dd9602e7723d5e5
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Mask
   - hash:
       serializedVersion: 2
       Hash: e6d75f1a9bc0c6f7085df0baa077e688
@@ -895,7 +926,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 41e6112c163f835e091591d63ed43a96
+      Hash: 1de3d1fd4b50865df8aad7c9a2ded0a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Whea
@@ -905,6 +936,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bag
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -989,25 +1026,7 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineBlendListCamera
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Bag
-  - hash:
-      serializedVersion: 2
-      Hash: 1ccf254e405f6294d6c7b85b87322752
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Crop
-  - hash:
-      serializedVersion: 2
-      Hash: f75b23d6c83c26e8f724166a8975e1e7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Auto
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "/home/yura/\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B/app/test.apk"
+  playerPath: "/home/yura/\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B/app/bfd.apk"
